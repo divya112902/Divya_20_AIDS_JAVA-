@@ -1,0 +1,55 @@
+public class Calculator {
+    
+    int num1, num2;
+
+   
+    Calculator() {
+        System.out.println("Welcome to Calculator!");
+    }
+
+    
+    Calculator(int a, int b) {
+        num1 = a;
+        num2 = b;
+        int sum = num1 + num2;
+        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum);
+    }
+
+    
+    void add() {
+        int a = 5, b = 10;
+        int sum = a+b;
+        System.out.println("Sum: " + sum);
+    }
+
+    
+    void add(int a, int b) {
+        int sum = a + b;
+        System.out.println("Sum of " + a + " and " + b +" is: " + sum);
+
+       
+    }
+
+    
+    void add(float a, float b, float c) {
+        float sum = a + b + c;
+        System.out.println("Sum of " + a + ", " + b + ", and " + c + " is: " + sum);
+        
+    }
+    public static void main(String[] args) {
+        Calculator calc1 = new Calculator();
+        Calculator calc2 = new Calculator(15,25);
+
+        calc1.add();
+        calc1.add(20,30);
+        calc1.add(12.5f , 15.5f , 10.0f);
+    }
+}
+
+OUTPUT:
+
+Welcome to Calculator!
+Sum of 15 and 25 is: 40
+Sum: 15
+Sum of 20 and 30 is: 50
+Sum of 12.5, 15.5, and 10.0 is: 38.0
