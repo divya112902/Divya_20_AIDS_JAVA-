@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+
+class Student {
+    
+    String name;
+    int rollNumber;
+    float marks;
+
+    
+    void inputDetails() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter name: ");
+        name = sc.nextLine();
+
+        System.out.print("Enter Roll no: ");
+        rollNumber = sc.nextInt();
+
+        System.out.print("Enter marks: ");
+        marks = sc.nextFloat();
+        sc.nextLine();
+    }
+       
+
+       
+       
+    
+
+    
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Marks: " + marks);
+        System.out.println();
+    }
+}
+
+
+public class StudentDemo {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+               Student student1 = new Student();
+               Student student2 = new Student();
+
+        
+        System.out.println("Enter details for Student 1:");
+        student1.inputDetails();
+
+        System.out.println("\nEnter details for Student 2:");
+        student2.inputDetails();
+
+        
+        System.out.println("\nStudent Details:");
+        student1.displayDetails();
+        student2.displayDetails();
+        sc.close();
+    }
+}
+
+
+OUTPUT:
+
+Enter details for Student 1:
+Enter name: Tom
+Enter Roll no: 292
+Enter marks: 95
+
+Enter details for Student 2:
+Enter name: Advi
+Enter Roll no: 119
+Enter marks: 92
+
+Student Details:
+Name: Tom
+Roll Number: 292
+Marks: 95.0
+
+Name: Advi
+Roll Number: 119
+Marks: 92.0
